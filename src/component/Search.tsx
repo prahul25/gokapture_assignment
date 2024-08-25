@@ -2,9 +2,9 @@ import useStore from '@/store/useStore';
 import React from 'react'
 
 function Search() {
-    const {setSearchQuery} = useStore()
+    const {setSearchQuery}:any = useStore()
 
-    const handleSearchChange = (e = "") => {
+    const handleSearchChange = (e:any) => {
         setSearchQuery(e.target.value);
       };
   return (

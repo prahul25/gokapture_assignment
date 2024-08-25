@@ -4,7 +4,7 @@ import useStore from '../store/useStore';
 import Pagination from './Pagination';
 
 const Grid = () => {
-  const { cells, cellFormats, updateCell, setSelectedCells, searchQuery, currentPage, itemsPerPage, validationErrors, setValidationRule } = useStore();
+  const { cells, cellFormats, updateCell, setSelectedCells, searchQuery, currentPage, itemsPerPage, validationErrors, setValidationRule }:any = useStore();
 
   useEffect(() => {
     // Example: Set validation rules for specific cells
@@ -12,26 +12,26 @@ const Grid = () => {
     setValidationRule(1, { type: 'text', pattern: '^[a-zA-Z]+$' }); // Cell 1 must be text-only with letters
   }, [setValidationRule]);
 
-  const handleCellChange = (index, value) => {
+  const handleCellChange = (index:any, value:any) => {
     updateCell(index, value);
   };
 
-  const handleCellClick = (index) => {
+  const handleCellClick = (index:any) => {
     setSelectedCells([index]);
   };
 
   const filteredCells = cells
-    .map((cell, index) => ({ value: cell, index }))
-    .filter((cell) => cell.value.includes(searchQuery));
+    .map((cell:any, index:any) => ({ value: cell, index }))
+    .filter((cell:any) => cell.value.includes(searchQuery));
 
-  const cellsToRender = searchQuery ? filteredCells : cells.map((value, index) => ({ value, index }));
+  const cellsToRender = searchQuery ? filteredCells : cells.map((value:any, index:any) => ({ value, index }));
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedCells = cellsToRender.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <div>
       <div className="grid grid-cols-10 gap-1 px-10">
-      {cells.map((cell, index) => (
+      {cells.map((cell:any, index:any) => (
         <div key={index} style={{ position: 'relative' }}>
           <input
             value={cell}

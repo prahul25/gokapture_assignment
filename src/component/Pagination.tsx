@@ -2,9 +2,9 @@
 import useStore from '../store/useStore';
 
 const Pagination = () => {
-  const { currentPage, itemsPerPage, cells, searchQuery, setCurrentPage } = useStore();
+  const { currentPage, itemsPerPage, cells, searchQuery, setCurrentPage }:any = useStore();
 
-  const totalItems = searchQuery ? cells.filter(cell => cell.includes(searchQuery)).length : cells.length;
+  const totalItems = searchQuery ? cells.filter((cell:any) => cell.includes(searchQuery)).length : cells.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
 
   const handleNextPage = () => {

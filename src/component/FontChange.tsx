@@ -2,8 +2,8 @@ import useStore from '@/store/useStore';
 import React from 'react'
 
 function FontChange() {
-    const { updateCellFormat,selectedCells  } = useStore();
-const handleFontSizeChange = (fontSize) => {
+    const { updateCellFormat,selectedCells  }:any = useStore();
+const handleFontSizeChange = (fontSize:string) => {
         updateCellFormat(selectedCells, { fontSize });
       };
   return (

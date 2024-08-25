@@ -9,7 +9,7 @@ const useStore = create((set) => ({
   validationErrors: {}, // State for validation errors
   validationRules: {}, // State for validation rules
 
-  updateCell: (index, value) => set((state) => {
+  updateCell: (index:any, value:any) => set((state:any) => {
     const rule = state.validationRules[index];
     let isValid = true;
     let errorMessage = '';
@@ -40,23 +40,23 @@ const useStore = create((set) => ({
     return { cells: newCells, validationErrors: newValidationErrors };
   }),
 
-  setValidationRule: (index, rule) => set((state) => {
+  setValidationRule: (index:any, rule:any) => set((state:any) => {
     const newValidationRules = { ...state.validationRules };
     newValidationRules[index] = rule;
     return { validationRules: newValidationRules };
   }),
 
-  updateCellFormat: (indexes, format) => set((state) => {
+  updateCellFormat: (indexes:any, format:any) => set((state:any) => {
     const newCellFormats = { ...state.cellFormats };
-    indexes.forEach(index => {
+    indexes.forEach((index:any) => {
       newCellFormats[index] = { ...newCellFormats[index], ...format };
     });
     return { cellFormats: newCellFormats };
   }),
 
-  setSelectedCells: (indexes) => set(() => ({ selectedCells: indexes })),
+  setSelectedCells: (indexes:any) => set(() => ({ selectedCells: indexes })),
 
-  undo: () => set((state) => {
+  undo: () => set((state:any) => {
     if (state.history.length > 0) {
       const previousState = state.history.pop();
       state.future.push(state.cells);
@@ -64,7 +64,7 @@ const useStore = create((set) => ({
     }
   }),
 
-  redo: () => set((state) => {
+  redo: () => set((state:any) => {
     if (state.future.length > 0) {
       const nextState = state.future.pop();
       state.history.push(state.cells);
