@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Spreadsheet App
 
-## Getting Started
+## Overview
 
-First, run the development server:
+The Spreadsheet App is a dynamic spreadsheet application built with React and TypeScript. It features cell editing, pagination, search functionality, and cell formatting. This project showcases a variety of frontend development skills and tools.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Pagination**: Displays a limited number of rows at a time with easy navigation.
+- **Search Functionality**: Filter cells based on the search query.
+- **Cell Editing**: Update cell values and apply formatting.
+- **Validation Rules**: Set rules for cell inputs (e.g., numeric values, text patterns).
+- **Undo/Redo**: Track and revert changes with undo and redo functionality.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds static types.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **Zustand**: State management library for React.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the Repository**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/your-username/spreadsheet-app.git
+    ```
+2. **Navigate to the Project Directory**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```bash
+   cd spreadsheet-app
+    ```
+3. **Install Dependencies**
 
-## Deploy on Vercel
+   ```bash
+   npm install
+    ```
+4. **Start the Development Server**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+    ```
+#### Open http://localhost:3000 in your browser to view the application.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Usage
+- **Editing Cells**: Click on a cell to edit its value. Changes will be reflected immediately.  
+- **Pagination**: Navigate through pages using the pagination controls.
+- **Search**: Use the search input to filter cells based on their content.
+- **Cell** Formatting: Apply formatting options like text alignment and font size.
+Contributing
+
+## Acknowledgments
+- **React**: For providing the foundation for building the UI.
+- **TypeScript**: For adding type safety and improving code quality.
+- **Tailwind CSS**: For simplifying the styling process.
+- **Zustand**: For efficient state management.
