@@ -1,5 +1,5 @@
-import Grid from "@/component/Grid";
-import Toolbar from "@/component/Toolbar";
+import Grid from "@/components/Grid";
+import Toolbar from "@/components/Toolbar";
 import Image from "next/image";
 
 export default function Home() {
@@ -10,6 +10,7 @@ export default function Home() {
         <div className="bg-white shadow-lg p-6 rounded-lg">
           <Grid />
         </div>
+        
       </main>
     </div>
   );
