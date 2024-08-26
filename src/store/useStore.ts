@@ -1,5 +1,17 @@
 import { create } from "zustand";
 
+type State = {
+  undoStack: any[];
+  redoStack: any[];
+  selectedCells: any[];
+  updateCellFormat: (cells: any[], format: any) => void;
+  undo: () => void;
+  redo: () => void;
+  canUndo: boolean;
+  canRedo: boolean;
+  // Add other state variables as needed
+};
+
 const useStore = create((set) => ({
     cells: Array(1000).fill(""),
     cellFormats: {},
@@ -12,7 +24,8 @@ const useStore = create((set) => ({
     currentPage: 1,  // Add this if not already present
     itemsPerPage: 40, // Set default items per page
     setSearchQuery: (query:string) => set({ searchQuery: query }),
-    setCurrentPage: (page:number) => set({ currentPage: page }), 
+    setCurrentPage: (page:number) => set({ currentPage: page }),
+  
 
   updateCell: (index: any, value: any) =>
     set((state: any) => {
