@@ -21,17 +21,7 @@ const Grid = () => {
     setValidationRule 
   }:any = useStore();
 
-  // Ensure `cellFormats` and `validationErrors` are properly typed
-  interface CellFormat {
-    fontSize?: string;
-    alignment?: 'left' | 'center' | 'right';
-  }
 
-  interface ValidationErrors {
-    [key: number]: string;
-  }
-
-  // Ensure `updateCell` and `setSelectedCells` parameters are correctly typed
   const handleCellChange = (index: number, value: string) => {
     updateCell(index, value);
   };

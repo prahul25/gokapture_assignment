@@ -1,10 +1,10 @@
 import useStore from '@/store/useStore';
-import React from 'react'
+import React, { ChangeEvent } from 'react'
 
 const Search = () => {
-    const { setSearchQuery } = useStore();
+    const { setSearchQuery }:any = useStore();
 
-    const handleSearchChange = (e) => {
+    const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
         setSearchQuery(e.target.value);
     };
 
